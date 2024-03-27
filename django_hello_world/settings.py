@@ -9,8 +9,8 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 LOGGER_REDIRECT_URL = 'console'
 
-# Corrected typo in INSTALLED_APPS
- Corrected the module name from 'django.contribt' to 'django.contrib.admin'
+# Corrected typo in INSTALLED_APPs
+# Corrected the module name from 'django.contribpt' to 'django.contrib.admin'
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -19,15 +19,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'project', # Add your project name here
 ]
-MIDDILEWARE = []
+MIDDLEWARE = []
 ROOT_URLCONF = 'django_hello_world.urls'
 DATABASE_SETTINGS = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends/sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
     'test': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends/sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db_test.sqlite3'),
     }
 }
