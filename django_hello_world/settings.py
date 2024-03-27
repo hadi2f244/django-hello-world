@@ -9,21 +9,25 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 LOGGER_REDIRECT_URL = 'console'
 
-# Added settings for installed apps, middleware, and databases
-# To keep things simple, we are using a simple setting for now
+# Corrected typo in INSTALLED_APPS
+ Corrected the module name from 'django.contribt' to 'django.contrib.admin'
 INSTALLED_APPS = [
-    'django.contribt.admin',
-    'project',
- ]
-MIDDLEWARE = []
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'project', # Add your project name here
+]
+MIDDILEWARE = []
 ROOT_URLCONF = 'django_hello_world.urls'
 DATABASE_SETTINGS = {
     'default': {
-        'ENGINE': 'django.db.backends/sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
     'test': {
-        'ENGINE': 'django.db.backends/sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db_test.sqlite3'),
     }
 }
